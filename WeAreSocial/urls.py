@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from ModelTest_App.views import get_contacts
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', get_contacts),
+    url(r'^contacts/', get_contacts),
 ]
